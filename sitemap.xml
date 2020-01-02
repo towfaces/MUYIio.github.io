@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://muyiio.com/about/index.html</loc>
+    
+    <lastmod>2020-01-02T13:27:40.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://muyiio.com/friends/index.html</loc>
+    
+    <lastmod>2020-01-02T13:27:03.042Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://muyiio.com/contact/index.html</loc>
+    
+    <lastmod>2020-01-02T13:25:13.098Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://muyiio.com/2020/01/02/2020/</loc>
     
     <lastmod>2020-01-01T16:22:46.491Z</lastmod>
@@ -16,13 +37,6 @@
   </url>
   
   <url>
-    <loc>https://muyiio.com/about/index.html</loc>
-    
-    <lastmod>2020-01-01T14:00:33.940Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://muyiio.com/archives/index.html</loc>
     
     <lastmod>2020-01-01T13:56:59.594Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>https://muyiio.com/categories/index.html</loc>
     
     <lastmod>2020-01-01T13:56:35.771Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://muyiio.com/contact/index.html</loc>
-    
-    <lastmod>2020-01-01T13:56:10.543Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://muyiio.com/friends/index.html</loc>
-    
-    <lastmod>2020-01-01T13:54:53.148Z</lastmod>
     
   </url>
   
