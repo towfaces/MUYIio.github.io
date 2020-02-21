@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://muyiio.com/"/>
-  <updated>2020-02-21T04:33:52.544Z</updated>
+  <updated>2020-02-21T17:47:06.187Z</updated>
   <id>https://muyiio.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS</title>
+    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS</title>
     <link href="https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/"/>
     <id>https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/</id>
     <published>2020-02-20T15:15:24.000Z</published>
-    <updated>2020-02-21T04:33:52.544Z</updated>
+    <updated>2020-02-21T17:47:06.187Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,10 @@
       
         
         
-          &lt;p&gt;相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。&lt;/p&gt;
-&lt;h2 id=&quot;文章目录&quot;&gt;&lt;a href=&quot;#文章目录&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱GitHub的龟速暴击，我们选择把博客推送到Coding来提升访问速度。&lt;/p&gt;
+&lt;p&gt;至于什么是Coding：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Coding WebIDE 是
         
       
     
@@ -43,16 +45,16 @@
     
       <category term="Coding" scheme="https://muyiio.com/tags/Coding/"/>
     
-      <category term="Https" scheme="https://muyiio.com/tags/Https/"/>
+      <category term="HTTPS" scheme="https://muyiio.com/tags/HTTPS/"/>
     
   </entry>
   
   <entry>
-    <title>Github+Hexo博客搭建超详细教程</title>
+    <title>Github + Hexo 博客搭建超详细教程</title>
     <link href="https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/"/>
     <id>https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/</id>
     <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2020-02-21T04:33:47.953Z</updated>
+    <updated>2020-02-21T17:47:09.629Z</updated>
     
     <summary type="html">
     
@@ -61,7 +63,7 @@
         
         
           &lt;p&gt;&lt;img src=&quot;01.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;font color=&quot;magenta&quot; size=&quot;4&quot;&gt;&lt;strong&gt;在搭建过程中遇到问题欢迎来骚扰我&lt;del&gt;~
+&lt;p&gt;&lt;font color=&quot;magenta&quot; size=&quot;4&quot;&gt;&lt;strong&gt;在搭建过程中遇到问题欢迎来骚扰我哈！&lt;font color=&quot;red&quot; size=&quot;4&quot;&gt;
         
       
     

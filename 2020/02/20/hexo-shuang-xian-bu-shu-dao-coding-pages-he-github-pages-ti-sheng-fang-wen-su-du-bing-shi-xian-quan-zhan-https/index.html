@@ -4,19 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS, 操作系统的编译原理与实现">
+    <meta name="keywords" content="Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS, 操作系统的编译原理与实现">
     <meta name="baidu-site-verification" content="Qf9NsGPLFU">
     <meta name="google-site-verification" content="Qf9NsGPLFU">
     <meta name="360-site-verification" content>
-    <meta name="description" content="相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。
-文章目录
-1.创建项目
-2.配置公钥
-3.配置 _config.yml
-4.开启 Coding Pages
-5.绑定域名并开启 Https
+    <meta name="description" content="相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱GitHub的龟速暴击，我们选择把博客推送到Coding来提升访问速度。
+至于什么是Coding：
 
-">
+Coding WebIDE 是 Coding 自主">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS | 赵晓龙的博客</title>
+    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS | 赵晓龙的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -298,13 +293,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS
+                        Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS
                     </div>
                 </div>
             </div>
@@ -423,8 +418,8 @@
                             <span class="chip bg-color">Coding</span>
                         </a>
                         
-                        <a href="/tags/Https/" target="_blank">
-                            <span class="chip bg-color">Https</span>
+                        <a href="/tags/HTTPS/" target="_blank">
+                            <span class="chip bg-color">HTTPS</span>
                         </a>
                         
                     </div>
@@ -461,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    62
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
                 
@@ -484,14 +479,74 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。</p>
+                <p>相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱GitHub的龟速暴击，我们选择把博客推送到Coding来提升访问速度。</p>
+<p>至于什么是Coding：</p>
+<blockquote>
+<p>Coding WebIDE 是 Coding 自主研发的在线集成开发环境 (IDE)。用户可以通过 WebIDE 创建项目的工作空间, 进行在线开发, 调试等操作。同时 WebIDE 集成了 Git 代码版本控制, 用户可以选择 Coding、GitHub、BitBucket、Git@OSC 等任意的代码仓库。 WebIDE 还提供了分享开发环境的功能, 用户可以保存当前的开发环境, 分享给团队的其他成员。大家可以理解为中国版的github，如果把代码既托管到coding上，又托管到github上，让大陆的用户访问的是由coding托管的网站，歪果仁访问的是由github托管的网站，以此来提升我们网站的访问速度。</p>
+</blockquote>
+<p>部署到 Coding Pages 的好处：国内访问速度更快，可以提交百度收录（GitHub 禁止了百度的爬取）</p>
+<p>部署过程中我所遇到的两个问题：使用密钥连接Coding时出现权限不足的情况；无法无法实现全站 HTTPS。这两个问题我会在文中给出解决办法。</p>
+<p>进行下面操作的前提是你已经将自己的博客推送到GitHub，如果没有，可以参考我之前的文章<a href="https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/" title="Github + Hexo 博客搭建超详细教程">《Github + Hexo 博客搭建超详细教程》</a></p>
 <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ul>
 <li>1.创建项目</li>
-<li>2.配置公钥</li>
-<li>3.配置 _config.yml</li>
+<li>2.配置 _config.yml</li>
+<li>3.将代码推送到Coding</li>
 <li>4.开启 Coding Pages</li>
 <li>5.绑定域名并开启 Https</li>
 </ul>
+<hr>
+<h1 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h1><p><a href="https://dev.tencent.com/production" title="Coding" target="_blank" rel="noopener">点击此处</a>进入Coding个人版官网注册账号，由于 Coding 已经被腾讯收购了，所以登录就会来到<a href="https://cloud.tencent.com/?fromSource=gwzcw.2212127.2212127.2212127&utm_medium=cpd&utm_id=gwzcw.2212127.2212127.2212127" target="_blank" rel="noopener">腾讯云</a>开发者平台：</p>
+<p><img src="01.png" alt></p>
+<p>找到创建项目：</p>
+<p><img src="02.png" alt></p>
+<p>项目名称建议和你的用户名一致，到时候可以直接通过 user_name.coding.me 访问你的博客，如果项目名与用户名不一致，则需要通过 user_name.coding.me/project_name 才能访问，项目描述随便写：</p>
+<p><img src="03.png" alt></p>
+<h1 id="2-配置-config-yml"><a href="#2-配置-config-yml" class="headerlink" title="2.配置 _config.yml"></a>2.配置 _config.yml</h1><p>进入我们的项目，在右上角选择连接方式，这里我以HTTPS为例，将链接复制下来：</p>
+<p><img src="04.png" alt></p>
+<p>然后打开你本地博客根目录的 _config.yml 文件，找到 deploy 关键字，添加 我们刚才复制的 coding 地址：</p>
+<p><img src="05.png" alt></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>1.如果要同时推送到GitHub和Coding，type前面加 -</li>
+<li>2.每一行冒号后面的空格不要忘记</li>
+</ul>
+<p>我这里不选择SSH连接Coding的原因：</p>
+<ul>
+<li>1.我的SSH连接GitHub没有问题，但是连接Coding就显示没有权限。</li>
+<li>2.找了很多教程，逐个尝试也没有找到原因。</li>
+</ul>
+<p><img src="06.png" alt></p>
+<p><strong>如果有大佬解出，欢迎给我指点！</strong></p>
+<p>还是要用SSH连接的小伙伴我给出这篇参考资料：</p>
+<p><a href="https://blog.csdn.net/ivan_zcy/article/details/82927483" title="hexo加快访问速度" target="_blank" rel="noopener">hexo加快访问速度</a> (By ivan_zcy)</p>
+<h1 id="3-将代码推送到Coding"><a href="#3-将代码推送到Coding" class="headerlink" title="3.将代码推送到Coding"></a>3.将代码推送到Coding</h1><p>现在我们在博客根目录下右键单击Git Bash Here，输入下面三个命令：</p>
+<pre><code>hexo clean 
+hexo g
+hexo d</code></pre><p><img src="07.png" alt></p>
+<p>使用HTTPS的缺点就是在推送时会要求我们输入Coding的用户名和密码，如果第一次输入错误了，可以参考这篇资料：</p>
+<p><a href="https://blog.csdn.net/qq_38948398/article/details/89953365?utm_source=app" title="git本地第一次推送密码填写错误处理方式" target="_blank" rel="noopener">git本地第一次推送密码填写错误处理方式</a> (By 颜墨白)</p>
+<h1 id="4-开启-Coding-Pages"><a href="#4-开启-Coding-Pages" class="headerlink" title="4.开启 Coding Pages"></a>4.开启 Coding Pages</h1><p>进入你的项目，在构建与部署一栏选择静态网站，这里需要实名认证：</p>
+<p><img src="08.png" alt></p>
+<p>选择我们的代码库：</p>
+<p><img src="09.png" alt></p>
+<p>这个时候就可以看到我们的网站地址啦：</p>
+<p><img src="10.png" alt></p>
+<h1 id="5-绑定域名并开启-Https"><a href="#5-绑定域名并开启-Https" class="headerlink" title="5.绑定域名并开启 Https"></a>5.绑定域名并开启 Https</h1><p>在静态网站一栏右上角点击设置，下滑到底绑定我们的域名（注意：<a href="http://www.xxx.com" target="_blank" rel="noopener">www.xxx.com</a> 开头）：</p>
+<p><img src="11.png" alt></p>
+<p>然后打开我们的域名解析，我在之前的文章中详细介绍了关于域名解析<a href="https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/" title="Github + Hexo 博客搭建超详细教程">《Github + Hexo 博客搭建超详细教程》</a>，两种方法：</p>
+<ul>
+<li>1.在域名 DNS 设置中添加一条 CNAME 记录指向 xxxx.coding.me，解析路线选择默认。</li>
+<li>2.在域名 DNS 设置中添加一条A记录，记录指向 xxxx.coding.me的ip，解析路线选择默认。（ip地址获取：WIN+R输入cmd进入终端，输入：ping xxxx.coding.me 即可。）</li>
+</ul>
+<p>将 GitHub 的解析路线改为 境外，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding</p>
+<p>我的解析：</p>
+<p><img src="12.png" alt></p>
+<p><strong>SSL证书申请失败解决方法：</strong></p>
+<ul>
+<li>先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书，大约十秒左右就能申请成功，然后开启强制 HTTPS 访问</li>
+</ul>
+<p><strong>开启HTTPS,如图，勾选即可：</strong><br><img src="13.png" alt></p>
+<p>文章中难免有错误的地方，有大佬发现了欢迎给我指正！有的地方解释不够详细，可以百度一下看看细节，文章中的引用以及参考资料涉及侵权请联系我删除！</p>
 
             </div>
             <hr />
@@ -650,7 +705,7 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS》
+                    《Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -985,23 +1040,18 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS">
                         
-                        <span class="card-title">Hexo 双线部署到 Coding Pages 和 GitHub Pages 并实现全站 HPPTS</span>
+                        <span class="card-title">Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。
-文章目录
-1.创建项目
-2.配置公钥
-3.配置 _config.yml
-4.开启 Coding Pages
-5.绑定域名并开启 Https
+                            相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱GitHub的龟速暴击，我们选择把博客推送到Coding来提升访问速度。
+至于什么是Coding：
 
-
+Coding WebIDE 是 Coding 自主
                         
                     </div>
                     <div class="publish-info">
@@ -1032,8 +1082,8 @@
                         <span class="chip bg-color">Coding</span>
                     </a>
                     
-                    <a href="/tags/Https/" target="_blank">
-                        <span class="chip bg-color">Https</span>
+                    <a href="/tags/HTTPS/" target="_blank">
+                        <span class="chip bg-color">HTTPS</span>
                     </a>
                     
                 </div>
@@ -1051,19 +1101,19 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Github+Hexo博客搭建超详细教程">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Github + Hexo 博客搭建超详细教程">
                         
-                        <span class="card-title">Github+Hexo博客搭建超详细教程</span>
+                        <span class="card-title">Github + Hexo 博客搭建超详细教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-在搭建过程中遇到问题欢迎来骚扰我~ V：godxiaolong，QQ:1571504536，如果觉得有帮助的话不介意打赏一杯奶茶哟
+在搭建过程中遇到问题欢迎来骚扰我哈！ V：godxiaolong，QQ:1571504536，如果觉得有帮助的话不介意打赏一杯奶茶哟~
 
 前言
-作为一名计算机爱好者，摸索了一周搭建出自己的博客。目前只学    习了c语言，没有任何前端知识和网
+作为一名计算机爱好者，摸索了一周搭建出自己的博客。目前只学    习了c语言，没有任何前端知识
                         
                     </div>
                     <div class="publish-info">
@@ -1256,7 +1306,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">5.5k</span>
+            <span class="white-color">6.7k</span>
             
 
             <br>
