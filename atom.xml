@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://muyiio.com/"/>
-  <updated>2020-02-21T17:47:06.187Z</updated>
+  <updated>2020-02-22T03:20:03.491Z</updated>
   <id>https://muyiio.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/"/>
     <id>https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/</id>
     <published>2020-02-20T15:15:24.000Z</published>
-    <updated>2020-02-21T17:47:06.187Z</updated>
+    <updated>2020-02-22T03:20:03.491Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,7 @@
       
         
         
-          &lt;p&gt;相信不少朋友用Hexo+Github搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱GitHub的龟速暴击，我们选择把博客推送到Coding来提升访问速度。&lt;/p&gt;
-&lt;p&gt;至于什么是Coding：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Coding WebIDE 是
+          &lt;p&gt;相信不少朋友用&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Hexo+Github&lt;/font&gt;搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱&lt;font color=&quot;red&quot;
         
       
     
@@ -72,9 +69,9 @@
       <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
     
     
-      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
-    
       <category term="Github" scheme="https://muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
     
       <category term="博客搭建" scheme="https://muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
