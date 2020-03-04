@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://muyiio.com/"/>
-  <updated>2020-02-22T06:57:16.079Z</updated>
+  <updated>2020-03-04T14:23:20.096Z</updated>
   <id>https://muyiio.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度并实现全站 HTTPS</title>
-    <link href="https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/"/>
-    <id>https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/</id>
-    <published>2020-02-20T15:15:24.000Z</published>
-    <updated>2020-02-22T06:57:16.079Z</updated>
+    <title>利用 Github 和 Coding 为 Hexo 博客开启 Https</title>
+    <link href="https://muyiio.com/2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/"/>
+    <id>https://muyiio.com/2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/</id>
+    <published>2020-02-24T13:33:26.000Z</published>
+    <updated>2020-03-04T14:23:20.096Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,63 @@
       
         
         
-          &lt;p&gt;相信不少朋友用&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Hexo+Github&lt;/font&gt;搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱&lt;font color=&quot;red&quot;
+          &lt;p&gt;本文记录使用&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Github&lt;/font&gt;和&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;Coding&lt;/font&gt;官方支持为我们的&lt;font color=&quot;red&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
+    
+    
+      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
+    
+      <category term="Https" scheme="https://muyiio.com/tags/Https/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-个人博客之博客实用功能添加</title>
+    <link href="https://muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/"/>
+    <id>https://muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/</id>
+    <published>2020-02-24T13:25:20.000Z</published>
+    <updated>2020-02-24T13:25:20.656Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-个人之博客主题美化</title>
+    <link href="https://muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/"/>
+    <id>https://muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/</id>
+    <published>2020-02-23T06:45:36.000Z</published>
+    <updated>2020-02-24T13:23:02.030Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度</title>
+    <link href="https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du/"/>
+    <id>https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du/</id>
+    <published>2020-02-20T15:15:24.000Z</published>
+    <updated>2020-02-24T14:13:01.483Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;font color=&quot;magenta&quot; size=&quot;4&quot;&gt;&lt;strong&gt;在操作过程中遇到问题欢迎来骚扰我哈！&lt;font color=&quot;red&quot; size=&quot;4&quot;&gt;
         
       
     
@@ -47,11 +103,11 @@
   </entry>
   
   <entry>
-    <title>Github + Hexo 博客搭建超详细教程</title>
-    <link href="https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/"/>
-    <id>https://muyiio.com/2020/02/18/github-hexo-bo-ke-da-jian-chao-xiang-xi-jiao-cheng/</id>
+    <title>Github + Hexo 搭建个人博客超详细教程</title>
+    <link href="https://muyiio.com/2020/02/18/github-hexo-da-jian-ge-ren-bo-ke-chao-xiang-xi-jiao-cheng/"/>
+    <id>https://muyiio.com/2020/02/18/github-hexo-da-jian-ge-ren-bo-ke-chao-xiang-xi-jiao-cheng/</id>
     <published>2020-02-18T13:17:35.000Z</published>
-    <updated>2020-02-22T06:58:05.767Z</updated>
+    <updated>2020-02-24T10:47:06.925Z</updated>
     
     <summary type="html">
     
@@ -69,9 +125,9 @@
       <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
     
     
-      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
-    
       <category term="Github" scheme="https://muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
     
       <category term="博客搭建" scheme="https://muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
