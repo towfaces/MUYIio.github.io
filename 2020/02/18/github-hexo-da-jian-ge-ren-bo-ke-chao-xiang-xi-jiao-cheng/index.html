@@ -294,7 +294,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.2k
+                    4.3k
                 </div>
                 
 
@@ -518,7 +518,7 @@
 <h2 id="一、下载博客源代码"><a href="#一、下载博客源代码" class="headerlink" title="一、下载博客源代码"></a>一、下载博客源代码</h2><p>大家可以直接素质二连，<font color="red" size="3">Star&amp;Fork</font>我的博客源代码：<a href="https://github.com/MUYIio/MUYIio.github.io" target="_blank" rel="noopener">https://github.com/MUYIio/MUYIio.github.io</a>，这里我给出两种下载方法：</p>
 <p><img src="03.png" alt></p>
 <p><strong>第一种</strong>：直接<font color="red" size="3">DownLoad</font>，下载到本地就可以。</p>
-<p><strong>第二种</strong>：如果你已经安装了<a href="https://git-scm.com/download/win" title="Git" target="_blank" rel="noopener">Git</a>，就可以右键单击<font color="red" size="3">Come Bash Here</font>运行<font color="red" size="3">git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:MUYIio/MUYIio.github.io.git</font>将所有文件下载到本地，这个复制一点。</p>
+<p><strong>第二种</strong>：如果你已经安装了<a href="https://git-scm.com/download/win" title="Git" target="_blank" rel="noopener">Git</a>，就可以右键单击<font color="red" size="3">Come Bash Here</font>运行<font color="red" size="3">git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:MUYIio/MUYIio.github.io.git</font>将所有文件下载到本地，这个复杂一点。</p>
 <h2 id="二、修改博客文档配置"><a href="#二、修改博客文档配置" class="headerlink" title="二、修改博客文档配置"></a>二、修改博客文档配置</h2><p>首先将我们下载的博客源代码解压，然后修改主要配置：</p>
 <ul>
 <li>根目录配置文件<font color="red" size="3">_config.yml</font>和主题目录配置文件<font color="red" size="3">_config.yml</font>中修改个人信息。</li>
@@ -528,7 +528,16 @@
 </ul>
 <p>我给出的是博客比较明显的几个地方，先修改这几个地方，其它的可以自己慢慢摸索修改。</p>
 <p>最后一步，<strong>本地的运行环境还是需要搭建好的</strong>，跟着下文操作到连接Github与本地，环境就算是搭建完成。</p>
-<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>了解一下什么是<font color="red" size="3">Node.js</font>：</p>
+<p><strong>本地环境搭建好之后会生成的文件：</strong></p>
+<p><img src="35.png" alt></p>
+<p>然后直接把Hexo文件夹删掉，把我的源代码的Hexo文件夹移动过来：</p>
+<p><img src="36.png" alt></p>
+<p>就是这样了：</p>
+<p><img src="37.png" alt></p>
+<p>然后输入以下命令上传就可以了：</p>
+<pre><code>hexo clean
+hexo g
+hexo d</code></pre><h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>了解一下什么是<font color="red" size="3">Node.js</font>：</p>
 <blockquote>
 <p><font color="red" size="3">Node.js</font>就是一个用于创建服务器端应用程序的运行系统，它可以轻松构建网络或其他事件驱动的应用程序服务器。</p>
 </blockquote>
@@ -539,7 +548,7 @@ $ npm -v</code></pre><p><a href="https://nodejs.org/en/download/" title="Node.js
 <p><img src="04.png" alt></p>
 <p>检验是否安装成功：<br>按<font color="red" size="3">Win+R</font>打开命令提示符，输入<font color="red" size="3">node -v</font>和<font color="red" size="3">npm -v</font>，如果出现版本号，那么就安装成功了。</p>
 <p><img src="05.png" alt></p>
-<h1 id="添加国内镜像"><a href="#添加国内镜像" class="headerlink" title="添加国内镜像"></a>添加国内镜像</h1><p>这里我们使用阿里的国内镜像进行加速。</p>
+<h1 id="添加国内镜像"><a href="#添加国内镜像" class="headerlink" title="添加国内镜像"></a>添加国内镜像</h1><p>这里我们使用阿里的国内镜像进行加速，按Win+R打开命令提示符输入：</p>
 <pre><code>npm config set registry https://registry.npm.taobao.org</code></pre><h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><blockquote>
 <p><font color="red" size="3">Git</font>是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理，帮助我们把本地网页上传到<font color="red" size="3">Github</font>。</p>
 </blockquote>
@@ -1189,7 +1198,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度">
                         
                         <span class="card-title">Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度</span>
                     </div>
@@ -1197,7 +1206,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            相信不少朋友用<font color=red size=3>Hexo+Github</font>搭建博客后，会发现网站的访问速度简直是龟速。为了摆脱<font color=red size=3>GitHub</font>的龟速暴击，我们选择把博客推送到<font color=red size=3>Coding</font>来提升访问速度。
+                            为了摆脱GitHub的龟速暴击，我们选择把博客托管到Coding来提升访问速度。
                         
                     </div>
                     <div class="publish-info">
@@ -1246,7 +1255,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="2019总结及2020规划">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2019总结及2020规划">
                         
                         <span class="card-title">2019总结及2020规划</span>
                     </div>
@@ -1439,7 +1448,7 @@ hexo d</code></pre><p>现在访问我们的网站就可以看到主题已经更�
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">8.7k</span>
+            <span class="white-color">8.8k</span>
             
 
             <br>
