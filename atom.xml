@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://muyiio.com/"/>
-  <updated>2020-03-07T02:52:49.702Z</updated>
+  <updated>2020-03-10T03:50:21.671Z</updated>
   <id>https://muyiio.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://muyiio.com/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/"/>
     <id>https://muyiio.com/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/</id>
     <published>2020-03-05T10:29:16.000Z</published>
-    <updated>2020-03-07T02:52:49.702Z</updated>
+    <updated>2020-03-10T03:50:21.671Z</updated>
     
     <summary type="html">
     
@@ -78,7 +78,7 @@
     <link href="https://muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/"/>
     <id>https://muyiio.com/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/</id>
     <published>2020-02-24T13:25:20.000Z</published>
-    <updated>2020-03-09T07:49:18.871Z</updated>
+    <updated>2020-03-10T14:06:30.804Z</updated>
     
     <summary type="html">
     
@@ -86,7 +86,7 @@
       
         
         
-          &lt;h1 id=&quot;添加Gittalk评论插件&quot;&gt;&lt;a href=&quot;#添加Gittalk评论插件&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;本文以作者&lt;a href=&quot;https://github.com/blinkfox&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blinkfox&lt;/a&gt;的&lt;a
         
       
     
@@ -108,7 +108,7 @@
     <link href="https://muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/"/>
     <id>https://muyiio.com/2020/02/23/hexo-ge-ren-bo-ke-zhi-bo-ke-zhu-ti-mei-hua/</id>
     <published>2020-02-23T06:45:36.000Z</published>
-    <updated>2020-03-09T07:49:17.630Z</updated>
+    <updated>2020-03-10T14:06:23.538Z</updated>
     
     <summary type="html">
     
@@ -116,7 +116,7 @@
       
         
         
-          &lt;h1 id=&quot;添加雪花飘落特效&quot;&gt;&lt;a href=&quot;#添加雪花飘落特效&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;本文以作者&lt;a href=&quot;https://github.com/blinkfox&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blinkfox&lt;/a&gt;的&lt;a
         
       
     
@@ -125,9 +125,9 @@
       <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
     
     
-      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
-    
       <category term="Github" scheme="https://muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
     
       <category term="博客美化" scheme="https://muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
     
@@ -186,9 +186,9 @@
       <category term="Blog" scheme="https://muyiio.com/categories/Blog/"/>
     
     
-      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
-    
       <category term="Github" scheme="https://muyiio.com/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://muyiio.com/tags/Hexo/"/>
     
       <category term="博客搭建" scheme="https://muyiio.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
