@@ -4,13 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="利用 Github 和 Coding 为 Hexo 博客开启 Https, 操作系统的编译原理与实现">
+    <meta name="keywords" content="对 Hexo 博客文章进行加密, 操作系统的编译原理与实现">
     <meta name="baidu-site-verification" content="Qf9NsGPLFU">
     <meta name="google-site-verification" content="Qf9NsGPLFU">
     <meta name="360-site-verification" content>
-    <meta name="description" content="本文记录使用Github和Coding官方支持为我们的Hexo博客开启Https
+    <meta name="description" content="写在前面
+有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。
 
-HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP ">
+这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
+
+为了解决这个问题，我们需要安装“ hexo-blog-encry">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>利用 Github 和 Coding 为 Hexo 博客开启 Https | 赵晓龙的博客</title>
+    <title>对 Hexo 博客文章进行加密 | 赵晓龙的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -292,13 +295,13 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        利用 Github 和 Coding 为 Hexo 博客开启 Https
+                        对 Hexo 博客文章进行加密
                     </div>
                 </div>
             </div>
@@ -408,28 +411,11 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
-                        <a href="/tags/Https/" target="_blank">
-                            <span class="chip bg-color">Https</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/Blog/" class="post-category" target="_blank">
-                            Blog
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -437,7 +423,7 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-24
+                    2020-03-12
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -451,14 +437,14 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    510
+                    724
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -474,32 +460,84 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文记录使用<font color="red" size="3">Github</font>和<font color="red" size="3">Coding</font>官方支持为我们的<font color="red" size="3">Hexo</font>博客开启<font color="red" size="3">Https</font></p>
-<blockquote>
-<p>HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性 [1]  。HTTPS 在HTTP 的基础下加入SSL 层，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP与 TCP 之间）。</p>
-</blockquote>
-<h1 id="使用GitHub开启Https"><a href="#使用GitHub开启Https" class="headerlink" title="使用GitHub开启Https"></a>使用GitHub开启Https</h1><p>目前利用<font color="red" size="3">GitHub Pages</font>的网站都可以开启<font color="red" size="3">Https</font>，不论是自定义域名还是官方的二级域名。</p>
-<p>首先来到我们的域名解析：</p>
-<p>如果你域名的记录类型是 <font color="red" size="3">CNAME</font> 方式，那么就不需要做任何更改；</p>
-<p>域名的记录类型是<font color="red" size="3"> A </font>方式，那么就需要把记录值指向以下<font color="red" size="3">IP</font>地址：</p>
-<ul>
-<li>185.199.108.153</li>
-<li>185.199.109.153</li>
-<li>185.199.110.153</li>
-<li>185.199.111.153</li>
+                <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
+<li><p>有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。</p>
+</li>
+<li><p>这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(</p>
+</li>
+<li><p>为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。</p>
+</li>
 </ul>
-<p>我的解析是在腾讯云，<font color="red" size="3">A</font>记录只能添加四个，<font color="red" size="3">GitHub</font>和<font color="red" size="3">Coding</font>就只能分配2个，所以上面的<font color="red" size="3">IP</font>我只解析了一个，不过阿里云好像可以解析多个，自己看着办。</p>
-<p>可以参考一下我的：</p>
-<p><img src="01.png" alt></p>
-<p>域名解析好了之后打开<font color="red" size="3">GitHub</font>仓库，点击【<font color="red" size="3">Settings</font>】：</p>
-<p><img src="02.png" alt></p>
-<p>勾选【<font color="red" size="3">Enforce HTTPS</font>】，注意：如果此时你不能勾选，请删除【<font color="red" size="3">Custom domain</font>】里面你的域名并点击【<font color="red" size="3">Save</font>】保存，刷新网页后就可以勾选了</p>
-<h1 id="使用Coding开启Https"><a href="#使用Coding开启Https" class="headerlink" title="使用Coding开启Https"></a>使用Coding开启Https</h1><p><strong>如果你的博客还没有托管到<font color="red" size="3">Coding</font>，可以参照我另外一篇文章：</strong><br><a href="https://muyiio.com/2020/02/20/hexo-shuang-xian-bu-shu-dao-coding-pages-he-github-pages-ti-sheng-fang-wen-su-du-bing-shi-xian-quan-zhan-https/" title="赵晓龙的博客">Hexo 双线部署到 Coding Pages 和 GitHub Pages 提升访问速度</a></p>
-<p>进入我们的<font color="red" size="3">Coding</font>项目，点击【<font color="red" size="3">构建与部署</font>】-【<font color="red" size="3">静态网站</font>】，再点击右上角的设置，下拉到底部勾选【<font color="red" size="3">强制 HTTPS</font>】。</p>
-<p><img src="03.png" alt></p>
-<p><strong>这里说明一下：</strong></p>
-<p><font color="red" size="3">Coding</font>绑定域名后<font color="red" size="3">SSL</font>证书申请失败，去域名解析把<font color="red" size="3">GitHub</font>解析暂停就可以申请成功了。</p>
-<p>参照：<a href="https://blog.csdn.net/qq_41793001/article/details/102995817?utm_source=app" target="_blank" rel="noopener">hexo双线部署coding+github pages，实现https并开启又拍云CDN全站加速</a></p>
+<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
+<li><p>一旦你输入了正确的密码，它就会被存储在本地浏览器的localStorage中。按个按钮，密码将会被清空。若博客中又脚本，它将被正确地执行。</p>
+</li>
+<li><p>支持按标签加密。</p>
+</li>
+<li><p>所有的核心功能都是由原生的API所提供的。在Node.js中，我们使用Crypto。在浏览器中，我们使用Web Crypto API。</p>
+</li>
+<li><p>PBKDF2，SHA256被用作复制密钥，AES256-CBC被用作加解密，我们还使用HMAC来验证密文的来源，并确保其纠正。</p>
+</li>
+<li><p>广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。</p>
+</li>
+<li><p>过时的浏览器将无法正常显示，因此，请升级您的浏览器。</p>
+</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><pre><code>npm install --save hexo-blog-encrypt</code></pre><h1 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h1><ul>
+<li><strong>将“ <font color="red" size="3">password</font>”添加到您的文章信息头就像这样</strong>：</li>
+</ul>
+<pre><code>```
+title: Hello World
+date: 2020-03-13 21:12:21
+password: muyiio
+---
+```</code></pre><h1 id="按标签加密"><a href="#按标签加密" class="headerlink" title="按标签加密"></a>按标签加密</h1><ul>
+<li><strong>修改文章信息头如下：</strong></li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java">title<span class="token operator">:</span> Hello World
+tags<span class="token operator">:</span>
+<span class="token operator">-</span> 加密文章tag
+date<span class="token operator">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">03</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">21</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">21</span>
+password<span class="token operator">:</span> muyiio
+<span class="token keyword">abstract</span><span class="token operator">:</span> 这里有东西被加密了，需要输入密码查看哦。
+message<span class="token operator">:</span> 您好，这里需要密码。
+wrong_pass_message<span class="token operator">:</span> 抱歉，这个密码看着不太对，请再试试。
+wrong_hash_message<span class="token operator">:</span> 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。
+<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><strong>对博客根目录<font color="red" size="3">_config</font>添加如下字段：</strong></li>
+</ul>
+<pre><code># 安全
+encrypt: # hexo-blog-encrypt
+  abstract: 这里有东西被加密了，需要输入密码查看哦。
+  message: 您好, 这里需要密码.
+  tags:
+  - {name: tagName, password: 密码A}
+  - {name: tagName, password: 密码B}
+  template: &lt;div id=&quot;hexo-blog-encrypt&quot; data-wpm=&quot;{{hbeWrongPassMessage}}&quot; data-whm=&quot;{{hbeWrongHashMessage}}&quot;&gt;&lt;div class=&quot;hbe-input-container&quot;&gt;&lt;input type=&quot;password&quot; id=&quot;hbePass&quot; placeholder=&quot;{{hbeMessage}}&quot; /&gt;&lt;label&gt;{{hbeMessage}}&lt;/label&gt;&lt;div class=&quot;bottom-line&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script id=&quot;hbeData&quot; type=&quot;hbeData&quot; data-hmacdigest=&quot;{{hbeHmacDigest}}&quot;&gt;{{hbeEncryptedData}}&lt;/script&gt;&lt;/div&gt;
+  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
+  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</code></pre><h1 id="对-TOC-文章进行加密"><a href="#对-TOC-文章进行加密" class="headerlink" title="对 TOC 文章进行加密"></a>对 TOC 文章进行加密</h1><p>如果您有一篇文章使用了<font color="red" size="3">TOC</font>，您需要修改模板的部分代码。这里以<font color="red" size="3">matery</font>主题作为示例：</p>
+<ul>
+<li><p><strong>在<font color="red" size="3">hexo/themes/matery/layout/_partial/article.ejs</font>找到<font color="red" size="3">article.ejs</font>。</strong></p>
+</li>
+<li><p><strong>然后找到<font color="red" size="3">&lt;％post.content％&gt;</font>这段代码，通常在<font color="red" size="3">30</font>行左右。</strong></p>
+</li>
+<li><p><strong>使用如下的代码来替代它：</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-javascriptj"><code class="language-javascriptj"><% if(post.toc == true){ %>
+  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
+    <strong class="toc-title">Index</strong>
+      <% if (post.encrypt == true) { %>
+        <%- toc(post.origin, {list_number: true}) %>
+      <% } else { %>
+        <%- toc(post.content, {list_number: true}) %>
+      <% } %>
+  </div>
+<% } %>
+<%- post.content %><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>本文转载自作者<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">MikeCoder</a>的<font color="red" size="3">hexo-blog-encrypt</font>项目，对有些地方略有修改。</p>
+<p>项目地址：<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a></p>
+<p>发现这个还是挺好玩的~</p>
 
             </div>
             <hr />
@@ -658,9 +696,9 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《利用 Github 和 Coding 为 Hexo 博客开启 Https》
+                    《对 Hexo 博客文章进行加密》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 赵晓龙
             </a> 采用
@@ -701,7 +739,7 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
         repo: 'muyiio.github.io',
         owner: 'MUYIio',
         admin: "MUYIio",
-        id: '2020/02/24/li-yong-github-he-coding-wei-hexo-bo-ke-kai-qi-https/',
+        id: '2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -984,9 +1022,50 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="对 Hexo 博客文章进行加密">
+                        
+                        <span class="card-title">对 Hexo 博客文章进行加密</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            写在前面
+有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。
+
+这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(
+
+为了解决这个问题，我们需要安装“ hexo-blog-encry
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-12
+                            </span>
+                        <span class="publish-author">
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/">
                     <div class="card-image">
@@ -1004,9 +1083,9 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1028,67 +1107,6 @@ HTTPS （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是�
                     
                     <a href="/tags/CentOS/" target="_blank">
                         <span class="chip bg-color">CentOS</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/24/hexo-ge-ren-bo-ke-zhi-bo-ke-shi-yong-gong-neng-tian-jia/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hexo-个人博客之博客实用功能添加">
-                        
-                        <span class="card-title">Hexo-个人博客之博客实用功能添加</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            本文以作者blinkfox的matery主题为例，对主题的部分地方进行优化，进行了一些美化。
-没有博客？
-Github + Hexo 搭建个人博客超详细教程
-获取我配置好的主题？
-git@github.com:MUYIio/Hexo-mat
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Blog/" class="post-category" target="_blank">
-                                    Blog
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/GitHub/" target="_blank">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                    <a href="/tags/博客优化/" target="_blank">
-                        <span class="chip bg-color">博客优化</span>
                     </a>
                     
                 </div>

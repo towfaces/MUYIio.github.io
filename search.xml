@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>对 Hexo 博客文章进行加密</title>
+      <link href="/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/"/>
+      <url>/2020/03/12/dui-hexo-bo-ke-wen-zhang-jin-xing-jia-mi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul><li><p>有时候我们可能需要写一些私密的博客，通过密码验证的方式让人不能随意浏览。</p></li><li><p>这在wordpress，emlog或其他博客系统中都很容易实现，然而hexo除外。:(</p></li><li><p>为了解决这个问题，我们需要安装“ hexo-blog-encrypt”扩展。</p></li></ul><h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul><li><p>一旦你输入了正确的密码，它就会被存储在本地浏览器的localStorage中。按个按钮，密码将会被清空。若博客中又脚本，它将被正确地执行。</p></li><li><p>支持按标签加密。</p></li><li><p>所有的核心功能都是由原生的API所提供的。在Node.js中，我们使用Crypto。在浏览器中，我们使用Web Crypto API。</p></li><li><p>PBKDF2，SHA256被用作复制密钥，AES256-CBC被用作加解密，我们还使用HMAC来验证密文的来源，并确保其纠正。</p></li><li><p>广泛地使用Promise来进行异步操作，从而确保线程不被杜塞。</p></li><li><p>过时的浏览器将无法正常显示，因此，请升级您的浏览器。</p></li></ul><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><pre><code>npm install --save hexo-blog-encrypt</code></pre><h1 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h1><ul><li><strong>将“ <font color="red" size="3">password</font>”添加到您的文章信息头就像这样</strong>：</li></ul><pre><code>```title: Hello Worlddate: 2020-03-13 21:12:21password: muyiio---```</code></pre><h1 id="按标签加密"><a href="#按标签加密" class="headerlink" title="按标签加密"></a>按标签加密</h1><ul><li><strong>修改文章信息头如下：</strong></li></ul><pre class="line-numbers language-java"><code class="language-java">title<span class="token operator">:</span> Hello Worldtags<span class="token operator">:</span><span class="token operator">-</span> 加密文章tagdate<span class="token operator">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">03</span><span class="token operator">-</span><span class="token number">13</span> <span class="token number">21</span><span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span><span class="token number">21</span>password<span class="token operator">:</span> muyiio<span class="token keyword">abstract</span><span class="token operator">:</span> 这里有东西被加密了，需要输入密码查看哦。message<span class="token operator">:</span> 您好，这里需要密码。wrong_pass_message<span class="token operator">:</span> 抱歉，这个密码看着不太对，请再试试。wrong_hash_message<span class="token operator">:</span> 抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。<span class="token operator">--</span><span class="token operator">-</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><strong>对博客根目录<font color="red" size="3">_config</font>添加如下字段：</strong></li></ul><pre><code># 安全encrypt: # hexo-blog-encrypt  abstract: 这里有东西被加密了，需要输入密码查看哦。  message: 您好, 这里需要密码.  tags:  - {name: tagName, password: 密码A}  - {name: tagName, password: 密码B}  template: &lt;div id=&quot;hexo-blog-encrypt&quot; data-wpm=&quot;{{hbeWrongPassMessage}}&quot; data-whm=&quot;{{hbeWrongHashMessage}}&quot;&gt;&lt;div class=&quot;hbe-input-container&quot;&gt;&lt;input type=&quot;password&quot; id=&quot;hbePass&quot; placeholder=&quot;{{hbeMessage}}&quot; /&gt;&lt;label&gt;{{hbeMessage}}&lt;/label&gt;&lt;div class=&quot;bottom-line&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script id=&quot;hbeData&quot; type=&quot;hbeData&quot; data-hmacdigest=&quot;{{hbeHmacDigest}}&quot;&gt;{{hbeEncryptedData}}&lt;/script&gt;&lt;/div&gt;  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.</code></pre><h1 id="对-TOC-文章进行加密"><a href="#对-TOC-文章进行加密" class="headerlink" title="对 TOC 文章进行加密"></a>对 TOC 文章进行加密</h1><p>如果您有一篇文章使用了<font color="red" size="3">TOC</font>，您需要修改模板的部分代码。这里以<font color="red" size="3">matery</font>主题作为示例：</p><ul><li><p><strong>在<font color="red" size="3">hexo/themes/matery/layout/_partial/article.ejs</font>找到<font color="red" size="3">article.ejs</font>。</strong></p></li><li><p><strong>然后找到<font color="red" size="3">&lt;％post.content％&gt;</font>这段代码，通常在<font color="red" size="3">30</font>行左右。</strong></p></li><li><p><strong>使用如下的代码来替代它：</strong></p></li></ul><pre class="line-numbers language-javascriptj"><code class="language-javascriptj"><% if(post.toc == true){ %>  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>    <strong class="toc-title">Index</strong>      <% if (post.encrypt == true) { %>        <%- toc(post.origin, {list_number: true}) %>      <% } else { %>        <%- toc(post.content, {list_number: true}) %>      <% } %>  </div><% } %><%- post.content %><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>本文转载自作者<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">MikeCoder</a>的<font color="red" size="3">hexo-blog-encrypt</font>项目，对有些地方略有修改。</p><p>项目地址：<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">https://github.com/MikeCoder/hexo-blog-encrypt</a></p><p>发现这个还是挺好玩的~</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VMware 安装 CentOS 8.1 完整教程 </title>
       <link href="/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/"/>
       <url>/2020/03/05/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng/</url>
@@ -103,9 +116,9 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Github </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> 博客美化 </tag>
             
@@ -161,9 +174,9 @@
       
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> Github </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> 博客搭建 </tag>
             
