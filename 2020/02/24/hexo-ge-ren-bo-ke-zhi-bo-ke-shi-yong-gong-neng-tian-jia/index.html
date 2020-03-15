@@ -20,7 +20,7 @@ git@github.com:MUYIio/Hexo-mat">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo-个人博客之博客实用功能添加 | 赵晓龙的博客</title>
+    <title>Hexo-个人博客之博客实用功能添加 | Tyzhao Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -58,7 +58,7 @@ git@github.com:MUYIio/Hexo-mat">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">赵晓龙的博客</span>
+                    <span class="logo-span">Tyzhao Blog</span>
                 </a>
             </div>
             
@@ -128,10 +128,10 @@ git@github.com:MUYIio/Hexo-mat">
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">赵晓龙的博客</div>
+        <div class="logo-name">Tyzhao Blog</div>
         <div class="logo-desc">
             
-            派斯学院| 计算机科学与技术 | Linux操作系统
+            派斯学院| C++|Java | Linux操作系统
             
         </div>
     </div>
@@ -294,7 +294,7 @@ git@github.com:MUYIio/Hexo-mat">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -566,7 +566,7 @@ layout: &quot;404&quot;
 description: &quot;页面丢失了 :(&quot;
 ---</code></pre><p>2.然后在<font color="red" size="3">/themes/matery/layout/</font>目录下新建一个<font color="red" size="3">404.ejs</font>文件，代码如下：</p>
 <pre><code>&lt;style type=&quot;text/css&quot;&gt;
-    /* don&#39;t remove. */
+    /* don&apos;t remove. */
     .about-cover {
         height: 75vh;
     }
@@ -590,7 +590,7 @@ description: &quot;页面丢失了 :(&quot;
 &lt;/div&gt;
 &lt;script&gt;
 
-    $(&#39;.bg-cover&#39;).css(&#39;background-image&#39;, &#39;url(/medias/banner/&#39; + new Date().getDay() + &#39;.jpg)&#39;);
+    $(&apos;.bg-cover&apos;).css(&apos;background-image&apos;, &apos;url(/medias/banner/&apos; + new Date().getDay() + &apos;.jpg)&apos;);
 &lt;/script&gt;</code></pre><p>添加完成。</p>
 <h1 id="文章图片水印"><a href="#文章图片水印" class="headerlink" title="文章图片水印"></a>文章图片水印</h1><p>1.在博客根目录下新建一个<font color="red" size="3">watermark.py</font>，代码如下：</p>
 <pre><code># -*- coding: utf-8 -*-
@@ -602,26 +602,26 @@ from PIL import ImageFont
 
 
 def watermark(post_name):
-    if post_name == &#39;all&#39;:
-        post_name = &#39;*&#39;
-    dir_name = &#39;source/_posts/&#39; + post_name + &#39;/*&#39;
+    if post_name == &apos;all&apos;:
+        post_name = &apos;*&apos;
+    dir_name = &apos;source/_posts/&apos; + post_name + &apos;/*&apos;
     for files in glob.glob(dir_name):
         im = Image.open(files)
         if len(im.getbands()) &lt; 3:
-            im = im.convert(&#39;RGB&#39;)
+            im = im.convert(&apos;RGB&apos;)
             print(files)
-        font = ImageFont.truetype(&#39;STSONG.TTF&#39;, max(30, int(im.size[1] / 20)))
+        font = ImageFont.truetype(&apos;STSONG.TTF&apos;, max(30, int(im.size[1] / 20)))
         draw = ImageDraw.Draw(im)
         draw.text((im.size[0] / 2, im.size[1] / 2),
-                  u&#39;@yourname&#39;, fill=(0, 0, 0), font=font)
+                  u&apos;@yourname&apos;, fill=(0, 0, 0), font=font)
         im.save(files)
 
 
-if __name__ == &#39;__main__&#39;:
+if __name__ == &apos;__main__&apos;:
     if len(sys.argv) == 2:
         watermark(sys.argv[1])
     else:
-        print(&#39;[usage] &lt;input&gt;&#39;)</code></pre><p>写完一篇文章可以运行<font color="red" size="3">python3 watermark.py postname</font>添加水印，如果第一次运行要给所有文章添加水印，可以运行<font color="red" size="3">python3 watermark.py all</font>。</p>
+        print(&apos;[usage] &lt;input&gt;&apos;)</code></pre><p>写完一篇文章可以运行<font color="red" size="3">python3 watermark.py postname</font>添加水印，如果第一次运行要给所有文章添加水印，可以运行<font color="red" size="3">python3 watermark.py all</font>。</p>
 <h1 id="添加背景音乐"><a href="#添加背景音乐" class="headerlink" title="添加背景音乐"></a>添加背景音乐</h1><p>1.首先打开网易云网页版，找到想听的歌曲，然后点击生成外链：</p>
 <p><img src="01.png" alt></p>
 <p>2.选择尺寸，复制代码：</p>
@@ -1122,7 +1122,7 @@ if __name__ == &#39;__main__&#39;:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="利用 Github 和 Coding 为 Hexo 博客开启 Https">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="利用 Github 和 Coding 为 Hexo 博客开启 Https">
                         
                         <span class="card-title">利用 Github 和 Coding 为 Hexo 博客开启 Https</span>
                     </div>
@@ -1175,7 +1175,7 @@ if __name__ == &#39;__main__&#39;:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Hexo-个人之博客主题美化">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Hexo-个人之博客主题美化">
                         
                         <span class="card-title">Hexo-个人之博客主题美化</span>
                     </div>
@@ -1187,7 +1187,7 @@ if __name__ == &#39;__main__&#39;:
 没有博客？
 Github + Hexo 搭建个人博客超详细教程
 获取我配置好的主题？
-git@github.com:MUYIio/Hexo-mat
+1git@github.com:MUYIio/Hexo-ma
                         
                     </div>
                     <div class="publish-info">
@@ -1209,12 +1209,12 @@ git@github.com:MUYIio/Hexo-mat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/" target="_blank">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/Github/" target="_blank">
                         <span class="chip bg-color">Github</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                     <a href="/tags/博客美化/" target="_blank">
@@ -1258,7 +1258,7 @@ git@github.com:MUYIio/Hexo-mat
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + '来源: 赵晓龙的博客<br />'
+            + '来源: Tyzhao Blog<br />'
             + '作者: 赵晓龙<br />'
             + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
@@ -1380,7 +1380,7 @@ git@github.com:MUYIio/Hexo-mat
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.9k</span>
+            <span class="white-color">13.2k</span>
             
 
             <br>
@@ -1499,27 +1499,10 @@ git@github.com:MUYIio/Hexo-mat
     siteTime();
 </script>
 
-  <div class="github-badge">
-    <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject">Hosted</span><span class="badge-value bg-brightgreen">GitHub</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject">DNR</span><span class="badge-value bg-firebrick">Tencenyun</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject">CDN</span><span class="badge-value bg-orange">jsDelivr</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject">PictureBed</span><span class="badge-value bg-blueviolet">SM.MS</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject">Theme</span><span class="badge-value bg-blue">Matery X</span>
-  </div>
-  <div class="github-badge">
-    <span class="badge-subject"><i class="fa fa-copyright"></i></span><span class="badge-value bg-lightgrey">BY-NC-SA 4.0</span>
-  </div>
+ 
+
+
+
 
 
     <!-- 搜索遮罩框 -->
