@@ -12,7 +12,7 @@
 没有博客？
 Github + Hexo 搭建个人博客超详细教程
 获取我配置好的主题？
-git@github.com:MUYIio/Hexo-mat">
+git clone git@github.com:MUYIi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -457,7 +457,7 @@ git@github.com:MUYIio/Hexo-mat">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.4k
                 </div>
                 
 
@@ -484,23 +484,19 @@ git@github.com:MUYIio/Hexo-mat">
 <p><strong>没有博客？</strong></p>
 <p><a href="https://www.muyiio.com/2020/02/18/github-hexo-da-jian-ge-ren-bo-ke-chao-xiang-xi-jiao-cheng/#toc-heading-20" target="_blank" rel="noopener">Github + Hexo 搭建个人博客超详细教程</a></p>
 <p><strong>获取我配置好的主题？</strong></p>
-<pre><code>git@github.com:MUYIio/Hexo-matery-Themes.git</code></pre><p><strong>须知：</strong> 不同的<font color="red" size="3">Hexo</font>主题的美化方式可能存在一些差异，但也相差无几，把源代码放在合适的位置就可以。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:MUYIio/Hexo-matery-Themes.git</span><br></pre></td></tr></table></figure>
+
+<p><strong>须知：</strong> 不同的<font color="red" size="3">Hexo</font>主题的美化方式可能存在一些差异，但也相差无几，把源代码放在合适的位置就可以。</p>
 <p><strong>前提条件：</strong> 进行博客主题美化前需要了解<font color="red" size="3">Hexo</font>博客的目录结构，主题的目录结构！请阅读官方文档。了解<font color="red" size="3"> HTML</font>、<font color="red" size="3">CSS</font>、<font color="red" size="3">JS</font>，了解 <font color="red" size="3">CSS </font>预处理语言 <font color="red" size="3">Sass</font>、<font color="red" size="3">Less</font>、<font color="red" size="3">Stylus</font>,有一定的前端知识最好。</p>
 <h1 id="添加gittalk评论插件"><a href="#添加gittalk评论插件" class="headerlink" title="添加gittalk评论插件"></a>添加gittalk评论插件</h1><p><font color="red" size="3">matery</font>主题自带<font color="red" size="3">gittalk</font>评论插件，我们只需要开启就可以了。</p>
 <p>1.打开<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">GitHub</a>申请，填写信息：</p>
-<pre><code>Application name //应用名称，随便填
-Homepage URL //填自己的博客地址
-Application description //应用描述，随便填
-Authorization callback URL //填自己的博客地址</code></pre><p><img src="04.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Application name <span class="comment">//应用名称，随便填</span></span><br><span class="line">Homepage URL <span class="comment">//填自己的博客地址</span></span><br><span class="line">Application description <span class="comment">//应用描述，随便填</span></span><br><span class="line">Authorization callback URL <span class="comment">//填自己的博客地址</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="04.png" alt></p>
 <p>2.打开<font color="red" size="3">themes/_config.yml</font>下修改<font color="red" size="3">gitalk</font>那里：</p>
-<pre><code>gitalk:
-  enable: true
-  owner: 你的github用户名
-  repo: 你的github用户名.github.io
-  oauth:
-    clientId: 粘贴刚刚注册完显示的字符串
-    clientSecret: 粘贴刚刚注册完显示的字符串
-  admin: 你的github用户名</code></pre><p>添加完成。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gitalk:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  owner: 你的github用户名</span><br><span class="line">  repo: 你的github用户名.github.io</span><br><span class="line">  oauth:</span><br><span class="line">	clientId: 粘贴刚刚注册完显示的字符串</span><br><span class="line">	clientSecret: 粘贴刚刚注册完显示的字符串</span><br><span class="line">  admin: 你的github用户名</span><br></pre></td></tr></table></figure>
+
+<p>添加完成。</p>
 <h1 id="添加RSS订阅"><a href="#添加RSS订阅" class="headerlink" title="添加RSS订阅"></a>添加RSS订阅</h1><blockquote>
 <p>简易信息聚合是“Really Simple Syndication”或“Richsite summary”(网站内容摘要)的中文名字。是站点用来和其他站点之间共享内容的一种简易方式。英文缩写为RSS技术。</p>
 </blockquote>
@@ -509,119 +505,37 @@ Authorization callback URL //填自己的博客地址</code></pre><p><img src="0
 </blockquote>
 <p><strong>安装：</strong></p>
 <p>1.在本地<font color="red" size="3">hexo</font>目录下右键<font color="red" size="3">git bash here</font>，输入以下命令：</p>
-<pre><code>npm install hexo-generator-feed</code></pre><p>2.安装完成后，打开<font color="red" size="3">hexo</font>目录下配置文件的<font color="red" size="3">_config.yml</font>，在末尾添加以下代码：</p>
-<pre><code># Extensions
-## Plugins: http://hexo.io/plugins/
-#RSS订阅
-plugin:
-- hexo-generator-feed
-#Feed Atom
-feed:
-type: atom
-path: atom.xml
-limit: 20</code></pre><p>3.最后打开主题配置文件<font color="red" size="3">themes/_config.yml</font>，添加以下代码：</p>
-<pre><code>rss: /atom.xml</code></pre><p>现在<font color="red" size="3">RSS</font>订阅就添加完成。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
+
+<p>2.安装完成后，打开<font color="red" size="3">hexo</font>目录下配置文件的<font color="red" size="3">_config.yml</font>，在末尾添加以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http://hexo.io/plugins/</span><br><span class="line">#RSS订阅</span><br><span class="line">plugin:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">type: atom</span><br><span class="line">path: atom.xml</span><br><span class="line">limit: <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<p>3.最后打开主题配置文件<font color="red" size="3">themes/_config.yml</font>，添加以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">rss: <span class="regexp">/atom.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>现在<font color="red" size="3">RSS</font>订阅就添加完成。</p>
 <h1 id="增加建站时间"><a href="#增加建站时间" class="headerlink" title="增加建站时间"></a>增加建站时间</h1><p>1.在<font color="red" size="3">/themes/matery/layout/_partial/footer.ejs</font>最后加上以下代码：</p>
-<pre><code>&lt;script language=javascript&gt;
-    function siteTime() {
-        window.setTimeout(&quot;siteTime()&quot;, 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); // 北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById(&quot;sitetime&quot;).innerHTML = &quot;本站已运行 &quot; +diffYears+&quot; 年 &quot;+diffDays + &quot; 天 &quot; + diffHours + &quot; 小时 &quot; + diffMinutes + &quot; 分钟 &quot; + diffSeconds + &quot; 秒&quot;;
-    }
-    siteTime();
-&lt;/script&gt;</code></pre><p>2.然后在自己想添加的地方（比如网站底部）添加以下代码：</p>
-<pre><code>&lt;span id=&quot;sitetime&quot;&gt;&lt;/span&gt;</code></pre><h1 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h1><p>1.在<font color="red" size="3">/source/</font>目录下新建一个<font color="red" size="3">404.md</font>，加上以下代码：</p>
-<pre><code>---
-title: 404
-date: 2019-07-19 16:41:10
-type: &quot;404&quot;
-layout: &quot;404&quot;
-description: &quot;页面丢失了 :(&quot;
----</code></pre><p>2.然后在<font color="red" size="3">/themes/matery/layout/</font>目录下新建一个<font color="red" size="3">404.ejs</font>文件，代码如下：</p>
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-    /* don&apos;t remove. */
-    .about-cover {
-        height: 75vh;
-    }
-&lt;/style&gt;
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script language=javascript&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.setTimeout(<span class="string">"siteTime()"</span>, <span class="number">1000</span>);</span><br><span class="line">        <span class="keyword">var</span> seconds = <span class="number">1000</span>;</span><br><span class="line">        <span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span><br><span class="line">        <span class="keyword">var</span> days = hours * <span class="number">24</span>;</span><br><span class="line">        <span class="keyword">var</span> years = days * <span class="number">365</span>;</span><br><span class="line">        <span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        <span class="keyword">var</span> todayYear = today.getFullYear();</span><br><span class="line">        <span class="keyword">var</span> todayMonth = today.getMonth() + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">var</span> todayDate = today.getDate();</span><br><span class="line">        <span class="keyword">var</span> todayHour = today.getHours();</span><br><span class="line">        <span class="keyword">var</span> todayMinute = today.getMinutes();</span><br><span class="line">        <span class="keyword">var</span> todaySecond = today.getSeconds();</span><br><span class="line">        <span class="comment">/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span><br><span class="line"><span class="comment">        year - 作为date对象的年份，为4位年份值</span></span><br><span class="line"><span class="comment">        month - 0-11之间的整数，做为date对象的月份</span></span><br><span class="line"><span class="comment">        day - 1-31之间的整数，做为date对象的天数</span></span><br><span class="line"><span class="comment">        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span><br><span class="line"><span class="comment">        minutes - 0-59之间的整数，做为date对象的分钟数</span></span><br><span class="line"><span class="comment">        seconds - 0-59之间的整数，做为date对象的秒数</span></span><br><span class="line"><span class="comment">        microseconds - 0-999之间的整数，做为date对象的毫秒数 */</span></span><br><span class="line">        <span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2017</span>, <span class="number">09</span>, <span class="number">11</span>, <span class="number">00</span>, <span class="number">00</span>, <span class="number">00</span>); <span class="comment">// 北京时间2018-2-13 00:00:00</span></span><br><span class="line">        <span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);</span><br><span class="line">        <span class="keyword">var</span> diff = t2 - t1;</span><br><span class="line">        <span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff / years);</span><br><span class="line">        <span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff / days) - diffYears * <span class="number">365</span>);</span><br><span class="line">        <span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days) / hours);</span><br><span class="line">        <span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours) / minutes);</span><br><span class="line">        <span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff - (diffYears * <span class="number">365</span> + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">"sitetime"</span>).innerHTML = <span class="string">"本站已运行 "</span> +diffYears+<span class="string">" 年 "</span>+diffDays + <span class="string">" 天 "</span> + diffHours + <span class="string">" 小时 "</span> + diffMinutes + <span class="string">" 分钟 "</span> + diffSeconds + <span class="string">" 秒"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    siteTime();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
-&lt;div class=&quot;bg-cover pd-header about-cover&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col s10 offset-s1 m8 offset-m2 l8 offset-l2&quot;&gt;
-                &lt;div class=&quot;brand&quot;&gt;
-                    &lt;div class=&quot;title center-align&quot;&gt;
-                        404
-                    &lt;/div&gt;
-                    &lt;div class=&quot;description center-align&quot;&gt;
-                        &lt;%= page.description %&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;script&gt;
+<p>2.然后在自己想添加的地方（比如网站底部）添加以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;span id=<span class="string">"sitetime"</span>&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 
-    $(&apos;.bg-cover&apos;).css(&apos;background-image&apos;, &apos;url(/medias/banner/&apos; + new Date().getDay() + &apos;.jpg)&apos;);
-&lt;/script&gt;</code></pre><p>添加完成。</p>
+<h1 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h1><p>1.在<font color="red" size="3">/source/</font>目录下新建一个<font color="red" size="3">404.md</font>，加上以下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="number">404</span></span><br><span class="line">date: <span class="number">2019</span><span class="number">-07</span><span class="number">-19</span> <span class="number">16</span>:<span class="number">41</span>:<span class="number">10</span></span><br><span class="line">type: <span class="string">"404"</span></span><br><span class="line">layout: <span class="string">"404"</span></span><br><span class="line">description: <span class="string">"页面丢失了 :("</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>2.然后在<font color="red" size="3">/themes/matery/layout/</font>目录下新建一个<font color="red" size="3">404.ejs</font>文件，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    <span class="comment">/* don't remove. */</span></span><br><span class="line">    .about-cover &#123;</span><br><span class="line">        height: <span class="number">75</span>vh;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;div class="bg-cover pd-header about-cover"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;div class="container"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div class="row"&gt;</span></span><br><span class="line"><span class="regexp">            &lt;div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2"&gt;</span></span><br><span class="line"><span class="regexp">                &lt;div class="brand"&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;div class="title center-align"&gt;</span></span><br><span class="line"><span class="regexp">                        404</span></span><br><span class="line"><span class="regexp">                    &lt;/</span>div&gt;</span><br><span class="line">                    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"description center-align"</span>&gt;</span><br><span class="line">                        &lt;%= page.description %&gt;</span><br><span class="line">                    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">                &lt;/</span>div&gt;</span><br><span class="line">            &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  </span><br><span class="line">    $(<span class="string">'.bg-cover'</span>).css(<span class="string">'background-image'</span>, <span class="string">'url(/medias/banner/'</span> + <span class="keyword">new</span> <span class="built_in">Date</span>().getDay() + <span class="string">'.jpg)'</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加完成。</p>
 <h1 id="文章图片水印"><a href="#文章图片水印" class="headerlink" title="文章图片水印"></a>文章图片水印</h1><p>1.在博客根目录下新建一个<font color="red" size="3">watermark.py</font>，代码如下：</p>
-<pre><code># -*- coding: utf-8 -*-
-import sys
-import glob
-from PIL import Image
-from PIL import ImageDraw
-from PIL import ImageFont
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageDraw</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFont</span><br></pre></td></tr></table></figure>
 
+<p>​    </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">def watermark(post_name):</span><br><span class="line">    <span class="keyword">if</span> post_name == <span class="string">'all'</span>:</span><br><span class="line">        post_name = <span class="string">'*'</span></span><br><span class="line">    dir_name = <span class="string">'source/_posts/'</span> + post_name + <span class="string">'/*'</span></span><br><span class="line">    <span class="keyword">for</span> files <span class="keyword">in</span> glob.glob(dir_name):</span><br><span class="line">        im = Image.open(files)</span><br><span class="line">        <span class="keyword">if</span> len(im.getbands()) &lt; <span class="number">3</span>:</span><br><span class="line">            im = im.convert(<span class="string">'RGB'</span>)</span><br><span class="line">            print(files)</span><br><span class="line">        font = ImageFont.truetype(<span class="string">'STSONG.TTF'</span>, max(<span class="number">30</span>, int(im.size[<span class="number">1</span>] / <span class="number">20</span>)))</span><br><span class="line">        draw = ImageDraw.Draw(im)</span><br><span class="line">        draw.text((im.size[<span class="number">0</span>] / <span class="number">2</span>, im.size[<span class="number">1</span>] / <span class="number">2</span>),</span><br><span class="line">                  u<span class="string">'@yourname'</span>, fill=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>), font=font)</span><br><span class="line">        im.save(files)</span><br></pre></td></tr></table></figure>
 
-def watermark(post_name):
-    if post_name == &apos;all&apos;:
-        post_name = &apos;*&apos;
-    dir_name = &apos;source/_posts/&apos; + post_name + &apos;/*&apos;
-    for files in glob.glob(dir_name):
-        im = Image.open(files)
-        if len(im.getbands()) &lt; 3:
-            im = im.convert(&apos;RGB&apos;)
-            print(files)
-        font = ImageFont.truetype(&apos;STSONG.TTF&apos;, max(30, int(im.size[1] / 20)))
-        draw = ImageDraw.Draw(im)
-        draw.text((im.size[0] / 2, im.size[1] / 2),
-                  u&apos;@yourname&apos;, fill=(0, 0, 0), font=font)
-        im.save(files)
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) == <span class="number">2</span>:</span><br><span class="line">        watermark(sys.argv[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'[usage] &lt;input&gt;'</span>)</span><br></pre></td></tr></table></figure>
 
-
-if __name__ == &apos;__main__&apos;:
-    if len(sys.argv) == 2:
-        watermark(sys.argv[1])
-    else:
-        print(&apos;[usage] &lt;input&gt;&apos;)</code></pre><p>写完一篇文章可以运行<font color="red" size="3">python3 watermark.py postname</font>添加水印，如果第一次运行要给所有文章添加水印，可以运行<font color="red" size="3">python3 watermark.py all</font>。</p>
+<p>写完一篇文章可以运行<font color="red" size="3">python3 watermark.py postname</font>添加水印，如果第一次运行要给所有文章添加水印，可以运行<font color="red" size="3">python3 watermark.py all</font>。</p>
 <h1 id="添加背景音乐"><a href="#添加背景音乐" class="headerlink" title="添加背景音乐"></a>添加背景音乐</h1><p>1.首先打开网易云网页版，找到想听的歌曲，然后点击生成外链：</p>
 <p><img src="01.png" alt></p>
 <p>2.选择尺寸，复制代码：</p>
@@ -1187,7 +1101,7 @@ if __name__ == &apos;__main__&apos;:
 没有博客？
 Github + Hexo 搭建个人博客超详细教程
 获取我配置好的主题？
-git@github.com:MUYIio/Hexo-mat
+git clone git@github.com:MUYIi
                         
                     </div>
                     <div class="publish-info">
@@ -1209,12 +1123,12 @@ git@github.com:MUYIio/Hexo-mat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Github/" target="_blank">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/" target="_blank">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Github/" target="_blank">
+                        <span class="chip bg-color">Github</span>
                     </a>
                     
                     <a href="/tags/博客美化/" target="_blank">
@@ -1380,7 +1294,7 @@ git@github.com:MUYIio/Hexo-mat
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">13.2k</span>
+            <span class="white-color">13.1k</span>
             
 
             <br>
@@ -1498,6 +1412,7 @@ git@github.com:MUYIio/Hexo-mat
     }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
     siteTime();
 </script>
+<a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=2020999999" target="_blank"> 2020999999号</a>
 
 
     <!-- 搜索遮罩框 -->
